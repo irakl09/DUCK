@@ -45,9 +45,6 @@
         <small>(Just click somewhere)</small>
     </h1>
     <main id="duck"></main>
-    
-    <!-- Your HTML code remains the same -->
-
 <script>
     // Array to store user-uploaded images
     let userImages = [];
@@ -88,9 +85,9 @@
 
     // Code to limit the number of ducks
     document.addEventListener('click', e => {
-        if (document.getElementById('duck').children.length >= 15) {
+        if (document.getElementById('duck').children.length >= 17) {
             let stopMsg = document.createElement('h2');
-            stopMsg.innerText = "TOO MUCH DUCK !BE CAREFUL !"
+            stopMsg.innerText = "TOO MUCH DUCK!BE CAREFUL!"
             stopMsg.style.top = e.clientY + "px";
             stopMsg.style.left = e.clientX + "px";
             document.getElementById('duck').append(stopMsg);
@@ -98,9 +95,9 @@
             // Choose a random image from user-uploaded, provided, and default images
             let allImages = [...userImages];
 
-            if (allImages.length < 15) {
+            if (allImages.length < 17) {
                 // Add images from the shuffled providedImageURLs
-                while (allImages.length < 15) {
+                while (allImages.length < 17) {
                     allImages.push(getNextImage());
                 }
             }
