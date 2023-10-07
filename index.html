@@ -51,17 +51,19 @@
 
     // Your provided image URLs
     let providedImageURLs = [
-        "https://i.postimg.cc/Nf9SgcRq/IMG-20231007-090432.png",
-        "https://i.postimg.cc/3Js6NcZy/IMG-20231007-090446.png",
-        "https://i.postimg.cc/PJNcvGcD/IMG-20231007-090501.png",
-        "https://i.postimg.cc/L8jW13yx/IMG-20231007-090517.png",
-        "https://i.postimg.cc/2jXgR6b7/IMG-20231007-090539.png",
-        "https://i.postimg.cc/C5t2jPTQ/IMG-20231007-090610.png",
-        "https://i.postimg.cc/DZxHzfCF/IMG-20231007-090625.png",
-        "https://i.postimg.cc/9fVntwKC/IMG-20231007-090637.png",
-        "https://i.postimg.cc/wvj4n89r/IMG-20231007-090656.jpg",
-        "https://i.postimg.cc/g0DBMkbR/IMG-20231007-090713.jpg",
-        "https://i.postimg.cc/HkKDC9Sz/20231007093520550.jpg",
+        "https://i.postimg.cc/VLFsf449/20231007093629633.jpg",
+        "https://i.postimg.cc/KvbvhC7v/IMG-20231007-090517.png",
+        "https://i.postimg.cc/26B8CDX3/IMG-20231007-090539.png",
+        "https://i.postimg.cc/Fz5FRB2p/IMG-20231007-090610.png",
+        "https://i.postimg.cc/J0NrBQ8L/IMG-20231007-090637.png",
+        "https://i.postimg.cc/s2xg0SYY/IMG-20231007-090713.jpg",
+        "https://i.postimg.cc/N0ZBJnft/IMG-20231007-232734.png",
+        "https://i.postimg.cc/bwCzbJ7s/IMG-20231007-232745.png",
+        "https://i.postimg.cc/tRWCf9xM/IMG-20231007-232801.png",
+        "https://i.postimg.cc/GmhLHYSW/IMG-20231007-233147.png",
+        "https://i.postimg.cc/VNJzFww4/IMG-20231007-233204.png",
+        "https://i.postimg.cc/MGLpkT5h/IMG-20231008-001206.jpg",
+        "https://i.postimg.cc/2S25wTZj/IMG-20231008-001228.jpg"
     ];
 
     // Shuffle the array of provided image URLs
@@ -85,9 +87,9 @@
 
     // Code to limit the number of ducks
     document.addEventListener('click', e => {
-        if (document.getElementById('duck').children.length >= 17) {
+        if (document.getElementById('duck').children.length >= 23) {
             let stopMsg = document.createElement('h2');
-            stopMsg.innerText = "TOO MUCH DUCK!BE CAREFUL!"
+            stopMsg.innerText = "TOO MUCH DUCK! BE CAREFUL!";
             stopMsg.style.top = e.clientY + "px";
             stopMsg.style.left = e.clientX + "px";
             document.getElementById('duck').append(stopMsg);
@@ -95,9 +97,9 @@
             // Choose a random image from user-uploaded, provided, and default images
             let allImages = [...userImages];
 
-            if (allImages.length < 17) {
+            if (allImages.length < 23) {
                 // Add images from the shuffled providedImageURLs
-                while (allImages.length < 17) {
+                while (allImages.length < 23) {
                     allImages.push(getNextImage());
                 }
             }
